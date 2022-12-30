@@ -1,0 +1,155 @@
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+.wrapper{
+ 
+    width: 500px;
+    height: 740px;
+    margin:auto;
+    margin-top: 15vh;
+    
+    border-radius: 20px;
+    cursor: grab;
+    overflow: hidden;
+    position: relative;
+    transition: transform 150ms box-shadow 150ms;
+    
+}
+.wrapper img {
+    width: 100%;
+    height:auto;
+   object-fit: cover;
+  
+
+}
+
+.wrapper:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 60px black;
+}
+.wrapper:hover .save{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.wrapper:hover .link{
+    opacity:1;
+    transform: translateY(0px);
+}
+.wrapper:hover .options{
+    opacity:1;
+    transform: translateY(0px);
+}
+.wrapper:hover .overlay{
+    opacity: 1;
+}
+
+.save{
+   
+    background-color: rgb(232, 66, 66);
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    opacity: 0;
+    transform: translateY(-700px);
+    transition: transform 150ms;
+}
+
+.link{
+    position:absolute;
+    bottom:0;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+    width:220px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background-color: beige;
+    padding: 10px;
+    border-radius: 35px;
+    opacity: 0;
+    transform: translateY(700px);
+    transition:transform 150ms;
+
+}
+.link a{
+    color: black;
+    text-decoration: none;
+   
+}
+.link ion-icon{
+    vertical-align: middle;
+    padding-right: 10px;
+}
+.options{
+ 
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:40px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+    background-color: beige;
+    padding:5px;
+    border-radius: 35px;
+    opacity:0;
+    transform: translateY(700px);
+    transition: transform 150ms;
+ 
+}
+.overlay{
+    opacity: 0;
+    background:linear-gradient(30deg, rgb(87, 72, 72), transparent);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.upload {
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    width:40px;
+    
+  
+    background-color: beige;
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+
+    padding:5px;
+    border-radius: 35px;
+    
+    
+  
+
+    
+   
+    opacity:0;
+    transform: translateY(700px);
+    transition: transform 150ms;
+ 
+
+}
+
+
+.wrapper:hover .upload {
+    opacity: 1;
+    transform: translateY(0px)
+}
+
